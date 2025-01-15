@@ -1,5 +1,5 @@
-import parse from '../src/parse.js';
 import _ from 'lodash';
+import parse from './parse.js';
 
 const genDiff = (filepath1, filepath2) => {
   const data1 = parse(filepath1);
@@ -12,7 +12,8 @@ const genDiff = (filepath1, filepath2) => {
   const result = [];
   result.push('{');
 
-  for (const key of keys) {
+  /* eslint-disable-next-line */
+  keys.map( (key) => {
     if (!Object.hasOwn(data1, key)) {
       result.push(`  + ${key} = ${data2[key]}`);
     } else if (!Object.hasOwn(data2, key)) {
@@ -23,9 +24,9 @@ const genDiff = (filepath1, filepath2) => {
     } else {
       result.push(`    ${key} = ${data1[key]}`);
     }
-  };
+  });
 
-  result.push('}')
+  result.push('}');
 
   return result.join('\n');
 };
