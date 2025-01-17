@@ -11,4 +11,5 @@ const result = `{
 
 test('genDiff', () => {
   expect(genDiff('file1.json', 'file2.json')).toEqual(result);
+  expect(genDiff('file1.yaml', 'file2.yaml')).toEqual(result);
 });
