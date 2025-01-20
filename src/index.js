@@ -11,7 +11,6 @@ const par = (filepath) => {
   return data;
 };
 
-
 const genDiff = (filepath1, filepath2) => {
   const data1 = par(filepath1);
   const data2 = par(filepath2);
