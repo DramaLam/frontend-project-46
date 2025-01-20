@@ -28,3 +28,15 @@ test('gendiff yaml', () => {
 test('gendiff json plain', () => {
   expect(genDiff(jsonFilepath1, jsonFilepath2, 'plain')).toBe(getResultFile('resultPlain.txt'));
 });
+
+test('gendiff yaml plain', () => {
+  expect(genDiff(yamlFilepath1, yamlFilepath2, 'plain')).toBe(getResultFile('resultPlain.txt'));
+});
+
+test('gendiff json json', () => {
+  expect(genDiff(jsonFilepath1, jsonFilepath2, 'plain')).toBe(getResultFile('resultPlain.txt'));
+});
+
+test('gendiff yaml json', () => {
+  expect(genDiff(yamlFilepath1, yamlFilepath2, 'plain')).toBe(getResultFile('resultPlain.txt'));
+});

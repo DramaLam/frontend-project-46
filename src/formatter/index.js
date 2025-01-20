@@ -7,6 +7,8 @@ const selectFormat = (data, format) => {
       return getStylish(data);
     case 'plain':
       return getPlain(data);
+    case 'json':
+      return JSON.stringify(data);
     default:
       throw new Error('ERROR format');
   }
