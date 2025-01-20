@@ -13,3 +13,6 @@
 
 step 8
 [![asciicast](https://asciinema.org/a/Id7ZoNZ4zyfbTHiHu8Bzl1MWv.svg)](https://asciinema.org/a/Id7ZoNZ4zyfbTHiHu8Bzl1MWv)
+
+step 9 json
+[![asciicast](https://asciinema.org/a/zoyx60oJLnJQmF1PkcswZZx0l.svg)](https://asciinema.org/a/zoyx60oJLnJQmF1PkcswZZx0l)
