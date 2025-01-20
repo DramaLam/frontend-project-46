@@ -10,3 +10,6 @@
 [![asciicast](https://asciinema.org/a/LOLETKIcNS60QG5u42HOWUAoF.svg)](https://asciinema.org/a/LOLETKIcNS60QG5u42HOWUAoF)
 
 [![asciicast](https://asciinema.org/a/DVh0CdjRbEHAjMqrCdnfOR6Pu.svg)](https://asciinema.org/a/DVh0CdjRbEHAjMqrCdnfOR6Pu)
+
+step 8
+[![asciicast](https://asciinema.org/a/Id7ZoNZ4zyfbTHiHu8Bzl1MWv.svg)](https://asciinema.org/a/Id7ZoNZ4zyfbTHiHu8Bzl1MWv)
