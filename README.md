@@ -12,10 +12,10 @@ node - v20.17.0<br>
 npm - 10.8.3
 
 ## Запуск проекта
-1. Склонируйте репозиторий на свой компьютер командой git clone
-2. Выполните команду make install
+1. Склонируйте репозиторий на свой компьютер командой ```git clone```
+2. Выполните команду ```make install```
 3. Введите команду gendiff с указанием путей до файлов. Дополнительно можно указать желаемый формат ответ (по умолчанию stylish).
-   Для примера можно использовать команду gendiff --format plain __fixtures__/file1.json __fixtures__/file2.json
+   Для примера можно использовать команду ```gendiff --format plain __fixtures__/file1.json __fixtures__/file2.json```
 
 ## Примеры работы проекта
 [![asciicast](https://asciinema.org/a/5A2nVbwAzZ13z6cAFTU4goFh4.svg)](https://asciinema.org/a/5A2nVbwAzZ13z6cAFTU4goFh4)
