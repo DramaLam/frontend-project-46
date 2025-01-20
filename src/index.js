@@ -3,7 +3,7 @@ import path from 'path';
 import process from 'process';
 import { jsonParse, yamlParse } from './parsers.js';
 import compareData from './compareData.js';
-import selectFormat from './formatter/selectFormat.js';
+import selectFormat from './formatter/index.js';
 
 const getParsed = (filepath) => {
   const absolutePath = path.resolve(process.cwd(), filepath);

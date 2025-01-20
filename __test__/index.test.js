@@ -15,12 +15,16 @@ const jsonFilepath2 = getFixturePath('file2.json');
 const yamlFilepath1 = getFixturePath('file1.yaml');
 const yamlFilepath2 = getFixturePath('file2.yaml');
 
-const result = fs.readFileSync(getFixturePath('result.txt'), 'utf-8');
+const getResultFile = (file) => fs.readFileSync(getFixturePath(file), 'utf-8');
 
 test('gendiff json', () => {
-  expect(genDiff(jsonFilepath1, jsonFilepath2)).toBe(result);
+  expect(genDiff(jsonFilepath1, jsonFilepath2)).toBe(getResultFile('result.txt'));
 });
 
 test('gendiff yaml', () => {
-  expect(genDiff(yamlFilepath1, yamlFilepath2)).toBe(result);
+  expect(genDiff(yamlFilepath1, yamlFilepath2)).toBe(getResultFile('result.txt'));
+});
+
+test('gendiff json plain', () => {
+  expect(genDiff(jsonFilepath1, jsonFilepath2, 'plain')).toBe(getResultFile('resultPlain.txt'));
 });
