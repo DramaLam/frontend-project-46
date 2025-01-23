@@ -17,26 +17,13 @@ const yamlFilepath2 = getFixturePath('file2.yaml');
 
 const getResultFile = (file) => fs.readFileSync(getFixturePath(file), 'utf-8');
 
-test('gendiff json', () => {
-  expect(genDiff(jsonFilepath1, jsonFilepath2)).toBe(getResultFile('result.txt'));
-});
-
-test('gendiff yaml', () => {
-  expect(genDiff(yamlFilepath1, yamlFilepath2)).toBe(getResultFile('result.txt'));
-});
-
-test('gendiff json plain', () => {
-  expect(genDiff(jsonFilepath1, jsonFilepath2, 'plain')).toBe(getResultFile('resultPlain.txt'));
-});
-
-test('gendiff yaml plain', () => {
-  expect(genDiff(yamlFilepath1, yamlFilepath2, 'plain')).toBe(getResultFile('resultPlain.txt'));
-});
-
-test('gendiff json json', () => {
-  expect(genDiff(jsonFilepath1, jsonFilepath2, 'plain')).toBe(getResultFile('resultPlain.txt'));
-});
-
-test('gendiff yaml json', () => {
-  expect(genDiff(yamlFilepath1, yamlFilepath2, 'plain')).toBe(getResultFile('resultPlain.txt'));
+test.each([
+  [jsonFilepath1, jsonFilepath2, 'stylish', 'result.txt'],
+  [yamlFilepath1, yamlFilepath2, 'stylish', 'result.txt'],
+  [jsonFilepath1, jsonFilepath2, 'plain', 'resultPlain.txt'],
+  [yamlFilepath1, yamlFilepath2, 'plain', 'resultPlain.txt'],
+  [jsonFilepath1, jsonFilepath2, 'json', 'resultJson.txt'],
+  [yamlFilepath1, yamlFilepath2, 'json', 'resultJson.txt'],
+])('%s и %s с расширением %s', (file1, file2, format, expected) => {
+  expect(genDiff(file1, file2, format)).toBe(getResultFile(expected));
 });
