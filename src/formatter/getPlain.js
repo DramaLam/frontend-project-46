@@ -9,7 +9,7 @@ const stringify = (value) => {
     return '[complex value]';
   }
 
-  return value;
+  return `${value}`;
 };
 
 const getPlain = (data) => {
