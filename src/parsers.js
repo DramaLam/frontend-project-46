@@ -15,4 +15,4 @@ const parsers = (data, filepath) => {
   return result;
 };
 
-export default  parsers;
+export default parsers;

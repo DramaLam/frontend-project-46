@@ -14,7 +14,7 @@ const getParsed = (filepath) => {
 
 const genDiff = (filepath1, filepath2, style = 'stylish') => {
   const data1 = getParsed(filepath1);
-  const data2 = getParsed(filepath2);;
+  const data2 = getParsed(filepath2);
 
   const fileParsedData1 = parsers(data1, filepath1);
   const fileParsedData2 = parsers(data2, filepath2);
