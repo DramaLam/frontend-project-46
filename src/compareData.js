@@ -22,13 +22,13 @@ const compareData = (data1, data2) => {
           : { oldValue: value1, newValue: value2, type },
       };
     }
-     return {
+    return {
       ...acc,
       [key]: {
         value: _.has(data1, key) ? value1 : value2,
-          type: _.has(data1, key) ? 'deleted' : 'added',
-      }
-    }
+        type: _.has(data1, key) ? 'deleted' : 'added',
+      },
+    };
   }, {});
 
   return distinctions;
