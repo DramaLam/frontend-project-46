@@ -22,11 +22,6 @@ const genDiff = (filepath1, filepath2, style = 'stylish') => {
   const fileParsedData1 = getParser(data1, fileType1);
   const fileParsedData2 = getParser(data2, fileType2);
 
-  console.log(`fileParsedData1`);
-  console.log(fileParsedData1);
-  console.log(`fileParsedData2`);
-  console.log(fileParsedData2);
-
   const comparsion = compareData(fileParsedData1, fileParsedData2);
 
   return selectFormat(comparsion, style);
