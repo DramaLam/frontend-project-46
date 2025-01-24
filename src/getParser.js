@@ -8,7 +8,7 @@ const getParser = (data, fileType) => {
   switch (fileType) {
     case '.json':
       return jsonParse(data);
-    case '.yaml':
+    case '.yaml' || '.yml':
       return yamlParse(data);
     default:
       throw new Error('Incorrect data format');
