@@ -5,6 +5,7 @@ const jsonParse = (data) => JSON.parse(data);
 const yamlParse = (data) => yaml.load(data);
 
 const getParser = (data, fileType) => {
+  console.log(`fileType ${fileType}`);
   switch (fileType) {
     case '.json':
       return jsonParse(data);
