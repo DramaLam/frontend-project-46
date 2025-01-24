@@ -10,12 +10,11 @@ const compareData = (data1, data2) => {
     const value1 = data1[key];
     const value2 = data2[key];
 
-    let type;
     if (_.has(data1, key) && _.has(data2, key)) {
       if (_.isObject(value1) && _.isObject(value2)) {
         return { ...acc, [key]: compareData(value1, value2) };
       }
-      type = _.isEqual(value1, value2) ? 'unchanged' : 'changed';
+      const type = _.isEqual(value1, value2) ? 'unchanged' : 'changed';
       return {
         ...acc,
         [key]: type === 'unchanged'
@@ -23,8 +22,13 @@ const compareData = (data1, data2) => {
           : { oldValue: value1, newValue: value2, type },
       };
     }
-    type = _.has(data1, key) ? 'deleted' : 'added';
-    return { ...acc, [key]: { value: type === 'deleted' ? value1 : value2, type } };
+     return {
+      ...acc,
+      [key]: {
+        value: _.has(data1, key) ? value1 : value2,
+          type: _.has(data1, key) ? 'deleted' : 'added',
+      }
+    }
   }, {});
 
   return distinctions;
